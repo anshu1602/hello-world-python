@@ -13,7 +13,7 @@ pipeline {
             }
             steps {
                 withSonarQubeEnv('SonarQube') {
-                    sh "${scannerHome}/bin/sonar-scanner"
+                    bat "${scannerHome}\\bin\\sonar-scanner.bat"
                 }
                 echo 'SonarQube analysis completed'
             }
